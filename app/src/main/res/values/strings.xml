@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CabeSehat</string>
+    <string name="bahasa">Atur Bahasa</string>
+    <string name="tentang">Tentang Aplikasi</string>
+    <string name="cabesehat">Cabe Sehat</string>
+    <string name="prg1">Adalah aplikasi untuk mendiagnosa penyakit pada tanaman cabai.</string>
+    <string name="prg2">Cabe Sehat juga berisi tentang penyakit tanaman cabai, meliputi gejalanya hingga cara pengendalian dan pencegahannya</string>
+    <string name="jdiag">Diagnosa Penyakit</string>
+    <string name="dpnyakit">Penyakit Cabai</string>
+    <string name="kontak">Kontak Kami</string>
+    <string name="obat">Pengendalian : </string>
+    <string name="gejala">Gejala : </string>
+    <string name="cegah">Pencegahan : </string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="penyebab">Penyebab : </string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_Diagnosa"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25sp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="3sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/jdiag"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="50sp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:layout_marginTop="50sp">
+
+            <ImageButton
+                android:id="@+id/btnfoto"
+                android:layout_width="100sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:background="@color/purple_700"
+                android:src="@drawable/camera" />
+
+            <Button
+                android:id="@+id/btndiagnosa"
+                android:layout_width="100sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16sp"
+                android:background="@color/purple_700"
+                android:text="@string/jdiag" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25sp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewAbout"
+        app:layout_constraintVertical_bias="0.051">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/dpnyakit"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="50sp"
+            android:background="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_penyakit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="20sp"
+            tools:listitem="@layout/layout_item" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>

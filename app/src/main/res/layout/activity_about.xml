@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".AboutActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25sp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="3sp"
+        tools:layout_editor_absoluteX="25sp">
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/btnback"/>
+
+        <TextView
+            android:id="@+id/textViewAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="@string/tentang"
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="50sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="30sp"
+            android:background="@color/black">
+
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/cabesehat"
+            android:textColor="@color/black"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginEnd="35sp"
+            android:text="@string/prg1"
+            android:layout_marginBottom="15sp"
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42sp"
+            android:layout_marginTop="200sp"
+            android:layout_marginEnd="35sp"
+            android:layout_marginBottom="15sp"
+            android:text="@string/prg2"
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="@dimen/cardview_default_radius"
+            android:text="v1.0.0"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

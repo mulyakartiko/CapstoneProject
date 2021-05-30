@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "554855441380",
+    "firebase_url": "https://cabesehat-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cabesehat",
+    "storage_bucket": "cabesehat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554855441380:android:2cdae0e0df66824b72ddf1",
+        "android_client_info": {
+          "package_name": "com.example.capstoneproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554855441380-7n7hogv5vr1596thki1voq8casv688ci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB53OGizk6kmc47Av51mlbWbMVFG_nzaU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554855441380-7n7hogv5vr1596thki1voq8casv688ci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
