@@ -131,11 +131,10 @@
                 android:justificationMode="inter_word"
                 android:layout_gravity="start"
                 android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="20sp"
                 android:text="@{isData.cegah}"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                tools:layout_editor_absoluteX="9dp"
-                tools:layout_editor_absoluteY="392dp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
         </ScrollView>

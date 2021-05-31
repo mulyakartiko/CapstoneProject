@@ -19,4 +19,7 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="penyebab">Penyebab : </string>
+    <string name="diag">Diagnosa</string>
+    <string name="select">Select</string>
+    <string name="hdiag">result</string>
 </resources>

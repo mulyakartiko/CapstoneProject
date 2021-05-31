@@ -4,78 +4,99 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:background="#FFF8F1"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_Diagnosa"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="25sp"
-        app:cardCornerRadius="20sp"
-        app:cardElevation="3sp">
-
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_Diagnosa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/jdiag"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:layout_margin="15sp"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="3sp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:layout_marginHorizontal="30sp"
-            android:layout_marginTop="30sp"
-            android:layout_marginBottom="50sp"
-            android:background="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/jdiag"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="129dp"
-            android:layout_marginTop="50sp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="50sp"
+                android:background="@color/black" />
 
-            <ImageButton
-                android:id="@+id/btnfoto"
-                android:layout_width="100sp"
-                android:layout_height="30sp"
-                android:layout_gravity="center"
-                android:background="@color/purple_700"
-                android:src="@drawable/camera" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30sp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btndiagnosa"
-                android:layout_width="100sp"
-                android:layout_height="30sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="16sp"
-                android:background="@color/purple_700"
-                android:text="@string/jdiag" />
+                <ImageView
+                    android:id="@+id/gambarpenyakit"
+                    android:layout_width="200sp"
+                    android:src="@drawable/ic_baseline_image_24"
+                    android:layout_height="200sp" />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
 
+                <Button
+                    android:id="@+id/btnselect"
+                    android:layout_width="100sp"
+                    android:layout_height="35sp"
+                    android:layout_marginEnd="30sp"
+                    android:background="@color/red"
+                    android:text="@string/select" />
 
-    </androidx.cardview.widget.CardView>
+                <Button
+                    android:id="@+id/btndiagnosa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35sp"
+                    android:background="@color/red"
+                    android:text="@string/diag"
+                    android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:paddingTop="30sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/hdiag"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25sp"
-        app:cardCornerRadius="20sp"
-        app:cardElevation="3sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewAbout"
-        app:layout_constraintVertical_bias="0.051">
+        android:layout_margin="15sp"
+        app:cardCornerRadius="10sp"
+        app:cardElevation="3sp">
 
         <TextView
             android:layout_width="match_parent"
@@ -83,6 +104,7 @@
             android:gravity="center"
             android:text="@string/dpnyakit"
             android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <View
