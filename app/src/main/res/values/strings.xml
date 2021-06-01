@@ -21,5 +21,6 @@
     <string name="penyebab">Penyebab : </string>
     <string name="diag">Diagnosa</string>
     <string name="select">Select</string>
-    <string name="hdiag">result</string>
+    <string name="hdiag">Hasil</string>
+    <string name="Foto">Foto</string>
 </resources>

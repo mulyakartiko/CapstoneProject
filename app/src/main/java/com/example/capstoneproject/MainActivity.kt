@@ -1,6 +1,8 @@
 package com.example.capstoneproject
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +12,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstoneproject.adapter.DataAdapter
 import com.example.capstoneproject.ml.Model
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var result: TextView
     lateinit var diagnosa: Button
     lateinit var select: Button
+    lateinit var foto: Button
     lateinit var bitmap: Bitmap
     lateinit var imageView: ImageView
 
@@ -46,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         diagnosa = findViewById(R.id.btndiagnosa)
         select = findViewById(R.id.btnselect)
         result = findViewById(R.id.tv_result)
+        foto = findViewById(R.id.btncamera)
 
         val label = application.assets.open("labels.txt").bufferedReader()
                 .use { it.readText() }.split("\n")
@@ -56,6 +62,15 @@ class MainActivity : AppCompatActivity() {
 
             startActivityForResult(intent, 100)
         })
+
+        if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_DENIED)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), 1888)
+
+        foto.setOnClickListener {
+            val cameraIntent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(cameraIntent, 1888)
+        }
 
         diagnosa.setOnClickListener(View.OnClickListener {
             val resize: Bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true)
@@ -78,10 +93,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
+        if (requestCode == 1888) {
+            var photo = data?.extras?.get("data") as Bitmap
+            imageView.setImageBitmap(photo)
+            bitmap = photo
+        } else {
         imageView.setImageURI(data?.data)
         var uri: Uri ?= data?.data
         bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, uri)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -139,3 +159,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
