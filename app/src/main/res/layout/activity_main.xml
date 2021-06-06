@@ -1,155 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg">
 
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:background="#FFF8F1"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_Diagnosa"
+            android:id="@+id/cv_diagnosa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15sp"
-            app:cardCornerRadius="10sp"
-            app:cardElevation="3sp">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="97dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_diagnosa"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/analyze">
+
+            </ImageView>
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/tv_diagnosa"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:text="@string/jdiag"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/diag"
+                android:textSize="13sp">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:layout_marginHorizontal="30sp"
-                android:background="@color/black" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="30sp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/gambarpenyakit"
-                    android:layout_width="200sp"
-                    android:src="@drawable/ic_baseline_image_24"
-                    android:layout_height="200sp" />
-
-                <LinearLayout
-                    android:layout_marginTop="20sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                <Button
-                    android:id="@+id/btnselect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35sp"
-                    android:layout_marginEnd="5sp"
-                    android:background="@drawable/button"
-                    android:textAllCaps="false"
-                    android:text="@string/select" />
-
-                <Button
-                    android:id="@+id/btncamera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35sp"
-                    android:layout_marginEnd="5sp"
-                    android:textAllCaps="false"
-                    android:background="@drawable/button"
-                    android:text="@string/Foto" />
-
-
-                    <Button
-                    android:id="@+id/btndiagnosa"
-                    android:layout_width="wrap_content"
-                    android:textAllCaps="false"
-                    android:layout_height="35sp"
-                    android:background="@drawable/button"
-                    android:text="@string/diag"
-                    android:textSize="14sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/tv_result"
-                    android:paddingTop="20sp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="@string/hdiag"/>
-
-            </LinearLayout>
-            </LinearLayout>
+            </TextView>
 
         </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15sp"
-        app:cardCornerRadius="10sp"
-        app:cardElevation="3sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_list_penyakit"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:orientation="vertical">
+            android:layout_below="@+id/cv_diagnosa"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/iv_list_penyakit"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_list_24">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_list_penyakit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_activity_list_penyakit"
+                android:textSize="13sp">
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pengaturan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_list_penyakit"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/iv_pengaturan"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@drawable/setting">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_pengaturan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
+                android:text="@string/pengaturan"
+                android:textSize="13sp">
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/dpnyakit"
-            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textSize="20sp" />
+            android:text="@string/welcome" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:layout_marginHorizontal="30sp"
-            android:background="@color/black" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_penyakit"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="30sp"
-            android:layout_marginBottom="20sp"
-            tools:listitem="@layout/layout_item" />
-
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-    </ScrollView>
-</layout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

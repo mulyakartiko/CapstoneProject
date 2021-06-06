@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="isData"
+            name="iniData"
             type="com.example.capstoneproject.model.DataItem" />
 
 
@@ -29,7 +29,7 @@
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:imageUrl="@{isData.img}"
+            android:imageUrl="@{iniData.img}"
             android:scaleType="fitXY" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:elevation="15dp"
             android:gravity="center"
             android:padding="10dp"
-            android:text="@{isData.nama}"
+            android:text="@{iniData.nama}"
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold|normal" />
@@ -65,7 +65,7 @@
                 android:justificationMode="inter_word"
                 android:layout_gravity="start"
                 android:layout_marginHorizontal="8dp"
-                android:text="@{isData.gejala}"
+                android:text="@{iniData.gejala}"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:layout_editor_absoluteX="0dp"
@@ -87,7 +87,7 @@
                 android:justificationMode="inter_word"
                 android:layout_gravity="start"
                 android:layout_marginHorizontal="8dp"
-                android:text="@{isData.penyebab}"
+                android:text="@{iniData.penyebab}"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:layout_editor_absoluteX="9dp"
@@ -109,7 +109,7 @@
                 android:justificationMode="inter_word"
                 android:layout_gravity="start"
                 android:layout_marginHorizontal="8dp"
-                android:text="@{isData.obat}"
+                android:text="@{iniData.obat}"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:layout_editor_absoluteX="9dp"
@@ -132,7 +132,7 @@
                 android:layout_gravity="start"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginBottom="20sp"
-                android:text="@{isData.cegah}"
+                android:text="@{iniData.cegah}"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
